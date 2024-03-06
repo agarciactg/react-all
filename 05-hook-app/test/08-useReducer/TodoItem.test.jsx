@@ -27,4 +27,17 @@ describe("Pruebas en <TodoItem />", () => {
     //   screen.debug();
     );
   });
+
+  test("debe de mostrar el Todo completado", () => {
+    todo.done = true;
+    
+    render(
+      <TodoItem 
+        todo={todo}
+        onToggleTodo={onToggleTodoMock}
+
+      />
+    )
+  });
+
 });
